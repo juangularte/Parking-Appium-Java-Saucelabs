@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<!-- <suite name="Android - Login Tests" verbose="1" allow-return-values="true" parallel="tests" thread-count="1"> -->
+<suite name="Android - Login Tests" verbose="1">
+	<listeners>
+		<listener class-name="appium.base.LocalTestListener"></listener>
+	</listeners>
+	
+	<test name="Android - Positive Login" >
+	<!--<parameter name="browser"  value="chrome"/>
+	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter> -->
+		<parameter name="username"  value="jcgularte@spplus.com"/>
+		<parameter name="password"  value="Helloworld10"/>
+	    <classes>
+	       <class name="android.local.Login.AndroidLoginTests">
+		       <methods>
+						<include name="positiveLogin"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Android - Negative Login - Invalid Credentials" >
+		<parameter name="username"  value="jcgularte@spplus.com"/>
+		<parameter name="password"  value="IncorrectPassword"/>
+	    <classes>
+	       <class name="android.local.Login.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginWithInvalidCredentials"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<!--<test name="Negative Login Test" >
+	    <classes>
+	       <class name="android.tests.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginErrors"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Negative Login Test JSON" >
+	    <classes>
+	       <class name="android.tests.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginErrorsJson"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>

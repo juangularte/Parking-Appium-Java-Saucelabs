@@ -1,0 +1,17 @@
+android/local/Login/AndroidLoginTests.class
+ios/local/Login/iOSLoginTests.class
+ios/local/Reservations/iOSReservationsGuestTests.class
+android/saucelabs/OnDemandGateless/AndroidSauceLabsOnDemandGatelessGuestTests.class
+ios/local/Reservations/iOSReservationsRegisteredTests.class
+android/saucelabs/Login/AndroidSauceLabsLoginTests.class
+android/local/Reservations/AndroidReservationsGuestTests.class
+android/saucelabs/OnDemandGateless/AndroidSauceLabsOnDemandGatelessRegisteredTests.class
+android/local/OnDemandGateless/AndroidOnDemandGatelessGuestTests.class
+android/local/Others/AndroidOtherTests.class
+android/local/Reservations/AndroidReservationsRegisteredTests.class
+ios/saucelabs/Reservations/iOSSauceLabsSauceLabsGuestTests.class
+ios/saucelabs/Login/iOSSauceLabsLoginTests.class
+ios/saucelabs/Reservations/iOSSauceLabsSauceLabsRegisteredTests.class
+android/saucelabs/Reservations/AndroidSauceLabsReservationsGuestTests.class
+android/local/OnDemandGateless/AndroidOnDemandGatelessRegisteredTests.class
+android/saucelabs/Reservations/AndroidSauceLabsReservationsRegisteredTests.class

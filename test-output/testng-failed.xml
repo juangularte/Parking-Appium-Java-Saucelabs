@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Android - Login Tests]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="appium.base.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Positive Login Test Android(failed)">
+    <parameter name="password" value="Helloworld10"/>
+    <parameter name="username" value="jcgularte@spplus.com"/>
+    <classes>
+      <class name="android.tests.AndroidLoginTests">
+        <methods>
+          <include name="shutDown"/>
+          <include name="goToWelcomeScreen"/>
+          <include name="positiveLogin" invocation-numbers="0"/>
+          <include name="setCapabilities"/>
+        </methods>
+      </class> <!-- android.tests.AndroidLoginTests -->
+    </classes>
+  </test> <!-- Positive Login Test Android(failed) -->
+</suite> <!-- Failed suite [Android - Login Tests] -->

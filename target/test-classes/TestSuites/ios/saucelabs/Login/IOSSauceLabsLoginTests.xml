@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="iOS - Login Tests" verbose="1" parallel="tests" thread-count="10">
+<!-- <suite name="Android - Login Tests" verbose="1"allow-return-values="true"> -->
+	<listeners>
+		<listener class-name="appium.base.SauceLabsTestListener"></listener>
+	</listeners>
+	
+	<test name="Positive Login Test iOS">
+		<classes>
+			<class name="ios.saucelabs.Login.iOSSauceLabsLoginTests">
+				<methods>
+						 <include name="positiveLogin"/>
+				 </methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- <test name="Negative Login Test - Invalid Credentials">
+		<parameter name="username"  value="jcgularte@spplus.com"/>
+		<parameter name="password"  value="IncorrectPassword"/>
+		<parameter name="errorMsg"  value="Your email address and/or password are incorrect. Please try again."/>
+	    <classes>
+	       <class name="android.tests.AndroidSauceLabsLoginTests">
+		       <methods>
+						<include name="negativeLoginWithInvalidCredentials"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+	
+	<!--<test name="Negative Login Test" >
+	    <classes>
+	       <class name="android.tests.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginErrors"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Negative Login Test JSON" >
+	    <classes>
+	       <class name="android.tests.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginErrorsJson"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>

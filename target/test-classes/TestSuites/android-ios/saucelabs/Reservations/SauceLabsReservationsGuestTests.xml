@@ -1,0 +1,59 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Sauce Labs Guest Tests" verbose="1" parallel="tests" thread-count="20">
+<!-- <suite name="Android - Login Tests" verbose="1"allow-return-values="true"> -->
+	<listeners>
+		<listener class-name="appium.base.SauceLabsTestListener"></listener>
+	</listeners>
+	
+	<test name="Android - Guest User Reservation">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="guestUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test>
+
+	<test name="iOS - Guest User Reservation" >
+	    <classes>
+	       <class name="ios.saucelabs.Reservations.iOSSauceLabsSauceLabsGuestTests">
+		       <methods>
+						<include name="guestUserReservation"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<!-- <test name="Guest Checkout - Find Exact Searched Location - Android">
+	    <classes>
+	       	<class name="android.saucelabs.Guest.AndroidSauceLabsGuestCheckoutTests">
+		       	<methods>
+					<include name="guestCheckoutSearchExactLocation"/>
+				</methods>
+	       	</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Positive Login - Android">
+	    <classes>
+	       <class name="android.saucelabs.Login.AndroidSauceLabsLoginTests">
+		       <methods>
+					<include name="positiveLogin"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> 
+	
+	<test name="Negative Login - Invalid Credentials - Android">
+	    <classes>
+	       <class name="android.saucelabs.Login.AndroidSauceLabsLoginTests">
+		       <methods>
+						<include name="negativeLoginWithInvalidCredentials"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>

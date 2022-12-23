@@ -1,0 +1,79 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<!-- <suite name="Android - Login Tests" verbose="1" allow-return-values="true" parallel="tests" thread-count="1"> -->
+<suite name="Android - Reservations - Guest User" verbose="1">
+	<listeners>
+		<listener class-name="appium.base.TestListener"></listener>
+	</listeners>
+	
+	<test name="Android - Guest User Reservation" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="guestUserReservation"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+
+	<!-- <test name="Android - Guest User Reservation with Promo Code" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="guestUserReservationWithPromoCode"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Android - Cancel Guest User Reservation" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="cancelGuestUserReservation"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Android - Change Vehicle for Guest User Reservation" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="changeVehicleGuestUserReservation"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+	
+	<!-- <test name="Android - Guest User Reservation with Access Code">
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="guestUserReservationWithAccessCode"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+	
+	<!-- <test name="Android - Guest User Event Reservation" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="guestUserEventReservation"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Android - Guest User Event Reservation with Promo Code" >
+	    <classes>
+	       <class name="android.local.Reservations.AndroidReservationsGuestTests">
+		       <methods>
+						<include name="guestUserEventReservationWithPromoCode"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>

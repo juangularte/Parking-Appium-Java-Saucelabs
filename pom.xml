@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.parking</groupId>
+	<artifactId>parking-android-ios</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>parking-android-ios</name>
+
+
+	<profiles>
+
+	<!-- ANDROID LOCAL SUITES -->
+
+		<profile>
+			<id>AndroidLocalGuestUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/local/Reservations/AndroidReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidLocalRegisteredUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/local/Reservations/AndroidReservationsRegisteredTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidLocalGuestUserOnDemandGateless</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/local/OnDemandGateless/AndroidOnDemandGatelessGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidLocalRegisteredUserOnDemandGateless</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/local/OnDemandGateless/AndroidOnDemandGatelessRegisteredTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	<!-- ANDROID SAUCE LABS SUITES -->
+
+		<profile>
+			<id>AndroidSauceLabs</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Login/IOSSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Login/AndroidSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Reservations/AndroidSauceLabsReservationsTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidSauceLabsGuestUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Reservations/AndroidSauceLabsReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidSauceLabsGuestUserOnDemandGateless</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/OnDemandGateless/AndroidSauceLabsOnDemandGatelessGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>AndroidSauceLabsRegisteredUserOnDemandGateless</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/OnDemandGateless/AndroidSauceLabsOnDemandGatelessRegisteredTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+		<!-- iOS LOCAL SUITES -->
+
+		<profile>
+			<id>iOSLocalGuestUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/ios/local/Reservations/iOSReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>iOSLocalRegisteredUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/ios/local/Reservations/iOSReservationsRegisteredTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+		<!-- iOS SAUCE LABS SUITES -->
+
+		<profile>
+			<id>iOSSauceLabs</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Login/IOSSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Login/AndroidSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Reservations/iOSSauceLabsReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>iOSSauceLabsGuestUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Login/IOSSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Login/AndroidSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Reservations/iOSSauceLabsReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	
+
+		<profile>
+			<id>iOSSauceLabsRegisteredUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Login/IOSSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<!-- <suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Login/AndroidSauceLabsLoginTests.xml</suiteXmlFile> -->
+								<suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Reservations/iOSSauceLabsReservationsRegisteredTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+		<!-- ANDROID & IOS SUITES -->
+		<profile>
+			<id>SauceLabsGuestUserReservations</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+						<configuration><source>17</source><target>17</target></configuration>
+					</plugin>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestSuites/ios/saucelabs/Reservations/iOSSauceLabsReservationsGuestTests.xml</suiteXmlFile>
+								<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Reservations/AndroidSauceLabsReservationsGuestTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+	<!-- TESTING SUITES -->
+		
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.10.1</version>
+				<configuration><source>17</source><target>17</target></configuration>
+			</plugin>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- <suiteXmlFile>src/test/resources/TestSuites/android/local/Login/AndroidLoginTests.xml</suiteXmlFile> -->
+						<suiteXmlFile>src/test/resources/TestSuites/android/saucelabs/Login/AndroidSauceLabsLoginTests.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>src/test/resources/TestSuites/android/local/Reservations/AndroidReservationsTests.xml</suiteXmlFile>  -->
+						<!-- <suiteXmlFile>src/test/resources/TestSuites/android/local/Reservations/AndroidReservationsRegisteredTests.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/local/Login/iOSLoginTests.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>src/test/resources/TestSuites/ios/local/Reservations/iOSReservationsTests.xml</suiteXmlFile> -->
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+
+ <dependencies>
+  	<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+	<dependency>
+	    <groupId>io.appium</groupId>
+	    <artifactId>java-client</artifactId>
+	    <!-- <version>7.6.0</version> -->
+		<version>8.1.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.141.59</version>
+		<!-- <version>4.5.3</version> -->
+	</dependency>
+
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-remote-driver</artifactId>
+		<version>4.5.0</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-api</artifactId>
+		<version>4.5.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.6.0</version>
+	    <!--<scope>test</scope>-->
+	</dependency>
+
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.17.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.17.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+	<dependency>
+	    <groupId>com.opencsv</groupId>
+	    <artifactId>opencsv</artifactId>
+	    <version>5.6</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.13.3</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>5.0.9</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.saucelabs/saucebindings-testng -->
+	<dependency>
+		<groupId>com.saucelabs</groupId>
+		<artifactId>saucebindings-testng</artifactId>
+		<version>1.0.0</version>
+	</dependency>
+
+
+	
+	<!-- APPIUM SERVER -->
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>1.7.30</version>
+	    <scope>test</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.30</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.9</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.11.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+	<dependency>
+	    <groupId>commons-validator</groupId>
+	    <artifactId>commons-validator</artifactId>
+	    <version>1.7</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.24</version>
+		<optional>true</optional>
+	</dependency>
+
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>31.1-jre</version>
+		<!-- <version>31.1-android</version> -->
+	  </dependency>
+
+ </dependencies>
+ 
+</project>

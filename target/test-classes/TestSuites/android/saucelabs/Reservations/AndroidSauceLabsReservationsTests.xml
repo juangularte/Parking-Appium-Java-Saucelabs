@@ -1,0 +1,155 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Android - Reservations Tests" verbose="1" parallel="tests" thread-count="20">
+<!-- <suite name="Android - Login Tests" verbose="1"allow-return-values="true"> -->
+	<listeners>
+		<listener class-name="appium.base.SauceLabsTestListener"></listener>
+	</listeners>
+	
+	<!-- <test name="Guest Checkout - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="guestUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test>
+
+	<test name="Guest Checkout with Promo Code - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="guestUserReservationWithPromoCode"/>
+				</methods>
+			</class>
+	    </classes>
+	</test>
+
+	<test name="Cancel Guest Checkout - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="cancelGuestUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Change Vehicle Guest User Reservation - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="changeVehicleGuestUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Guest User Reservation with Access Code - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="guestUserReservationWithAccessCode"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Guest User Event Reservation - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsGuestTests">
+				<methods>
+					<include name="guestUserEventReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+
+
+
+
+	<!-- <test name="Registered Checkout - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="registeredUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+	
+	<!-- <test name="Registered User Reservation with Promo Code - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="registeredUserReservationWithPromoCode"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Cancel Registered User Reservation - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="cancelRegisteredUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Change Vehicle Registered User Reservation - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="changeVehicleRegisteredUserReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<!-- <test name="Registered User Reservation with Access Code - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="registeredUserReservationWithAccessCode"/>
+				</methods>
+			</class>
+	    </classes>
+	</test> -->
+
+	<test name="Registered User Event Reservation - Android">
+	    <classes>
+			<class name="android.saucelabs.Reservations.AndroidSauceLabsReservationsRegisteredTests">
+				<methods>
+					<include name="registeredUserEventReservation"/>
+				</methods>
+			</class>
+	    </classes>
+	</test>
+
+
+
+	<!-- <test name="Positive Login - Android">
+	    <classes>
+	       <class name="android.saucelabs.Login.AndroidSauceLabsLoginTests">
+		       <methods>
+					<include name="positiveLogin"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> 
+	
+	<test name="Negative Login - Invalid Credentials - Android">
+	    <classes>
+	       <class name="android.saucelabs.Login.AndroidSauceLabsLoginTests">
+		       <methods>
+						<include name="negativeLoginWithInvalidCredentials"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>
